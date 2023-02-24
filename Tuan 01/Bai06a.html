@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai06</title>
+    <style>
+        table, th, td{
+            border: 1px solid rgb(1, 52, 181);
+            border-collapse: collapse;
+            text-align: center;
+            height: 30px;
+            padding-bottom: 20px;
+            padding-inline: center;
+        }
+        #org{
+            background-color: coral;
+        }
+        #yl{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:300px">
+        <tr>
+            <td>1</td>
+            <td colspan="4">2</td>
+        </tr>
+        <tr>
+            <td rowspan="3">3</td>
+                <td id="org">4</td>
+                <td id="org">5</td>
+            <td colspan="2" rowspan="2" id="yl">6</td>
+        </tr>
+        <tr>
+            <td id="org">7</td>
+            <td id="org">8</td>
+        </tr>
+        <tr>
+            <td colspan="2" id="yl">9</td>
+            <td colspan="2" id="yl">10</td>
+        </tr>
+    </table>
+</body>
+</html>
