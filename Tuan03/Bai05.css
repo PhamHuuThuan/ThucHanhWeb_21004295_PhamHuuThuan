@@ -1,0 +1,7 @@
+.example1{
+    background-image: url(ProductListing/gradient.jpg), url(ProductListing/background.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    height: 500px;
+}
