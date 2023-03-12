@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 5%;
+        }
+        .bordercolor{
+            text-align: center;
+            width: 500px;
+            height: 150px;
+            border: 10px solid;
+            border-top-color: #86C226;
+            border-right-color: #F7C200;
+            border-bottom-color: #4493A0;
+            border-left-color: #DF127B;
+        }
+        .borderstyle{
+            text-align: center;
+            width: 500px;
+            height: 150px;
+            border: 10px;
+            border-top-color: #86C226;
+            border-right-color: #F7C200;
+            border-bottom-color: #4493A0;
+            border-left-color: #DF127B;
+            border-top-style: solid;
+            border-right-style: dotted;
+            border-bottom-style: groove;
+            border-left-style: double;
+        }
+        .borderwidth{
+            text-align: center;
+            width: 500px;
+            height: 150px;
+            border: solid;
+            border-top-color: #86C226;
+            border-right-color: #F7C200;
+            border-bottom-color: #4493A0;
+            border-left-color: #DF127B;
+            border-width: 5px 10px 15px 20px;
+        }
+        .borderradius{
+            text-align: center;
+            width: 600px;
+            height: 150px;
+            border: 10px solid;
+            border-top-color: #86C226;
+            border-right-color: #F7C200;
+            border-bottom-color: #4493A0;
+            border-left-color: #DF127B;
+            border-radius: 0px 30px 70px 20px;
+        }
+        .hemisphere{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            border-width: 4px 30px 4px 30px;
+            border-style: groove ridge dashed groove;
+            border-color: #cc0000;
+            border-radius: 100px 100px 0 0;
+            -moz-border-radius: 100px 100px 0 0;
+            -webkit-border-radius: 100px 100px 0 0;
+        }
+        .roundrectangle{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            border: 5px solid orange;
+            border-radius:  20px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+        }
+        .advround{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            border-width: 0px 12px 0px 12px;
+            border-style: double;
+            border-color: violet;
+            border-radius: 40px 40px 60px 60px;
+            -moz-border-radius: 40px 40px 60px 60px;
+            -webkit-border-radius: 40px 40px 60px 60px;
+        }
+        .bullet{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            border: 5px solid rgb(0, 0, 129);
+            border-radius: 20px 100px 100px 20px;
+            -moz-border-radius: 20px 100px 100px 20px;
+            -webkit-border-radius: 20px 100px 100px 20px;
+        }
+        .advleaf{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            background: greenyellow;
+            border-width: 4px 30px 4px 30px;
+            border-color: #56c6d9 #56c6d9 #fe2192 #fe2192;
+            border-style: solid;
+            border-radius: 0 120px 0 120px;
+
+        }
+        .btnsub{
+            width: 200px;
+            height: 40px;
+            background-color: #428bca;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            vertical-align: middle;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="bordercolor">
+        <p>Here the top border is green(#85C226) in color,</p>
+        <p>right border is yellow (#F7C200),</p>
+        <p>the bottom has blue (#4493A0)</p>
+        <p>and Left border is pink(#DF127B) in color.</p>
+    </div>
+    <div class="borderstyle">
+        <p>Here the top border (green) has a solid style</p>
+        <p>right (yellow) one has dotted,</p>
+        <p>Bottom (bue) one has groove and</p>
+        <p>the left (pink) one has the double style.</p>
+    </div>
+    <div class="borderwidth">
+        <p>Here top (green) border's width is 5pixel</p>
+        <p>right (yellow) border is 10pixel wide,</p>
+        <p>bottom (blue) is 15pixel</p>
+        <p>and lleft (pink) is 20 pixel wide.</p>
+    </div>
+    <div class="borderradius">
+        <p>No Border radius (0px) has been applied on the top-left (green-pink) corner.</p>
+        <p>Border radius (30px) has been applied on the top-right (green-yellow) corner.</p>
+        <p>Border radius (70px) has been applied on the bottom-right (blue-yellow) corner.</p>
+        <p>Border radius  (20px) has been applied on the bottom-left (blue-oink) corner.</p>
+    </div>
+    <div class="hemisphere">
+        <p>Adv-Hemisphere</p>
+    </div>
+    <div class="roundrectangle">
+        <p>Round</p>
+        <p>Rectangle</p>
+    </div>
+    <div class="advround">
+        <p>Advanced Round</p>
+        <p>Rectangle</p>
+    </div>
+    <div class = "bullet">
+        <p>Bullet</p>
+    </div>
+    <div class="advleaf">
+        <p>Advanced Leaf</p>
+    </div>
+    <div>
+        <input type="submit" value="Subscribe Now" class="btnsub">
+    </div>
+</body>
+</html>
