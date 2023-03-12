@@ -1,0 +1,20 @@
+table, td, th{
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border: 1px solid #993738;
+    border-collapse: collapse;
+}
+th{
+    background-color: #993738;
+    color: white;
+}
+th,td:first-child{
+    text-align: start;
+    width: 250px;
+}
+td,th:last-child{
+    text-align: right;
+    width: 120px;
+}
+tr:nth-child(even){
+    background-color: rgb(161, 161, 161);
+}
