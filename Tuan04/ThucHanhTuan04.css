@@ -5,15 +5,16 @@ body{
 }
 .page{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    width: 1440px;
 }
 .menu{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.218);
     width: 90px;
     height: 900px;
 }
@@ -45,14 +46,18 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.218);
     height: 900px;
-    width: 830px;
+    width: 910px;
+    margin-left: 37.25px;
 }
 .title{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     font-family: Arial, Helvetica, sans-serif;
+    width: 830px;
     margin-top: 30px;
 }
 .livetime{
@@ -101,8 +106,8 @@ body{
 .container1{
     display: flex;
     flex-direction: column;
-    width: 830px;
-    height: 645px;
+    width: 800px;
+    height: 455px;
 }
 .live{
     position: relative;
@@ -116,9 +121,8 @@ body{
     top: 3%;
     display: flex;
     justify-content: space-between;
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 800px;
+    margin-left: 10px;
 }
 .nameuser{
     display: flex;
@@ -146,12 +150,11 @@ body{
 }
 .detailusersmall{
     position: absolute;
-    top: 3%;
+    top: 10px;
     display: flex;
     justify-content: space-between;
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 240px;
+    margin-left: 10px;
 }
 .nameusersmall{
     display: flex;
@@ -163,6 +166,11 @@ body{
     border-radius: 5px;
     width: 105px;
     height: 25px;
+}
+#imgsmall{
+    width: 260px;
+    height: 160px;
+    border-radius: 10px;
 }
 .dotsmall{
     background-color: rgb(0, 255, 0);
@@ -180,4 +188,136 @@ body{
     height: 20px;
     background-color: white;
     border-radius: 5px;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    width: 830px;
+    height: 45px;
+}
+.tools{
+    display: flex;
+    justify-content: space-between;
+    width: 485px;
+    height: 45px;
+}
+#btnEnd{
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: white;
+}
+.rightside{
+    width: 445px;
+    height: 900px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.membertop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    width: 420px;
+    height: 360px;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.218);;
+}
+.titlemember{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 70px;
+}
+.partici{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 165px;
+    height: 30px;
+}
+#numberMember{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    color: red;
+    border-radius: 50px;
+    background-color: rgba(153, 153, 153, 0.255);
+}
+.btnAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: red;
+}
+.memberlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#memberdetail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+}
+#cammic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+}
+.chatbottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+.messbox{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 100px;
+}
+.usermess{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+}
+.username{
+    margin-left: 5px;
+}
+#mess{
+    margin-left: 40px;
+}
+.typemess{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#boxtext{
+    width: 325px;
+    height: 45px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgba(159, 159, 159, 0.185);
+}
+.typeuser{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 70px;
 }
