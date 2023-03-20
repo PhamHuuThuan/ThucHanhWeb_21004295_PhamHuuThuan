@@ -11,6 +11,8 @@
     height: 70px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.25);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .menu-left{
     width: 45%;
@@ -44,20 +46,28 @@
     color: aqua;
     border-bottom: 3px solid aqua;
 }
+.menu-right{
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .form-search{
-    background-color: rgba(146, 146, 146, 0.54);
-    float: left;;
+    background-color: rgba(225, 225, 225, 0.315);
     width: 330px;
     height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10px;
 }
 #btnsearch{
-    border: none;
-    height: 35px;
-    width: auto;
-    bottom: unset;
+    margin-left: 10px;
 }
 #txtsearch{
     height: 35px;
     border: none;
     background: none;
+    margin-left: 10px;
 }
