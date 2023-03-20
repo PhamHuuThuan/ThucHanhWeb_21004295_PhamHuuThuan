@@ -3,6 +3,9 @@
     padding: 0;
     color: black;
 }
+body{
+    width: 1440px;
+}
 .page{
     width: 1440px;
 }
@@ -82,6 +85,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin: 0;
 }
 #tabname{
     color: gray;
@@ -97,4 +101,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.img-product{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-desc{
+    
 }
