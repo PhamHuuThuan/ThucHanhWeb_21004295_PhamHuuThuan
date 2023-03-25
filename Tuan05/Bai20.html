@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style class="text/css">
+        .menu{
+            width: auto;
+            display: flex;
+        }
+        .menu ul li{
+            list-style: none;
+            background-color: rgb(4, 122, 249);
+            color: rgb(0, 3, 181);
+            text-shadow: -1px -1px 0px brown;
+            width: 110px;
+            line-height: 40px;
+            margin-bottom: 5px;
+            text-align: center;
+            border: 3px dashed white;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 0px 5px rgb(4, 122, 249), 5px 5px 10px 3px black;
+            border-radius: 10px;
+            position: relative;
+        }
+        .menu ul li ul {
+            display: none;
+        }
+        .menu ul li:hover ul {
+            display: block;
+            position: absolute;
+            left: 70px;
+            top: 0;
+        }
+        .menu ul li ul li{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Products
+                <ul>
+                    <li>Photography</li>
+                    <li>Web & User Interface Design</li>
+                    <li>lllistration</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
