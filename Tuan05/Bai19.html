@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .menu{
+            width: 800px;
+            height: 40px;
+            display: flex;
+        }
+        .menu ul li{
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            line-height: 40px;
+            background-color: black;
+            color: white;
+            padding: 0 30px 0 30px;
+        }
+        .menu ul li ul{
+            display: none;
+        }
+        .menu ul li:hover{
+            background-color: lightgreen;
+        }
+        .menu ul li:hover ul{
+            display: block;
+            position: absolute;
+            left: -40px;
+            width: 220px;
+        }
+        .menu ul li ul li{
+            display: block;
+            background-color: rgb(218, 218, 218);
+            color: black;
+            line-height: 40px;
+            padding: 0 10px 0 10px;
+        }
+        .menu ul li ul li:hover{
+            background-color: rgb(0, 211, 21);
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li>Home</li>
+            <li>Introdution>></li>
+            <li>Portfolio>>
+                <ul>
+                    <li>Photography</li>
+                    <li>Web & User Interface Design</li>
+                    <li>lllustration</li>
+                </ul>
+            </li>
+            <li>News</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
