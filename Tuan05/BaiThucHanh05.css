@@ -354,6 +354,7 @@ input[type=text]:focus{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 50px;
 }
 .form-sub{
     display: flex;
@@ -383,5 +384,56 @@ input[type=text]:focus{
     margin: 0;
     border: none;
     background: rgb(66, 190, 243);
+    color: white;
     border-radius: 0px 5px 5px 0;
+}
+.footer-link{
+    width: 730px;
+    height: 135px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.product-footer{
+
+}
+.product-footer a, .product-footer li{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 20px;
+    font-size: small;
+    font-weight: 500;
+}
+.footer-copyright{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 0 0;
+}
+.comboBox-Language{
+    width: 130px;
+    height: 35px;
+    background-color: rgba(206, 206, 206, 0.286);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.copyright{
+    display: flex;
+    color: gray;
+}
+.copyright ul li{
+    color: gray;
+    margin-left: 20px;
+}
+.copyright ul{
+    display: flex;
+}
+.social-media{
+    display: flex;
+    width: 145px;
+    justify-content: space-between;
+}
+.social-media a{
+    text-decoration: none;
 }
