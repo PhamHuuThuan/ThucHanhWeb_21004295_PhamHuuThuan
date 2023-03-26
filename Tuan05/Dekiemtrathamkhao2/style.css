@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.page{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    background-color: rgb(31, 24, 90);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 35%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.cityname{
+    margin-left: 5px;
+}
+.form-search{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 20px;
+}
+.form-search input{
+    border: 2px solid rgb(83, 167, 240);
+    margin-left: 5px;
+    border-radius: 2px;
+}
+.menu{
+    width: 100%;
+    background-color: rgb(31, 24, 90);
+    height: 40px;
+    font-weight: bold;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+.menu ul{
+    width: 100%;
+    text-align: end;
+    display: block;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 0 20px 0 20px;
+    margin-right: 10px;
+    background-color: rgb(12, 178, 255);
+    line-height: 40px;
+    position: relative;
+}
+.menu li:hover{
+    background-color: black;
+}
+.menu ul li ul{
+    display: none;
+}
+.menu ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 220px;
+    top: 100;
+    left: 0;
+}
+.menu ul li ul li{
+    display: block;
+    text-align: start;
+}
+.center{
+    width: 100%;
+    display: flex;
+}
+.leftside{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 20px;
+}
+.lefttitle{
+    font-size: 25px;
+    color: brown;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed brown;
+}
+.form-detail{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.form-detail p{
+    font-size: 13px;
+    color: red;
+    font-style: italic;
+    text-shadow: 2px 2px 3px rgb(0, 162, 40);
+    margin-bottom: 20px;
+}
+.input-grid{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 5%;
+    margin-bottom: 20px;
+}
+textarea{
+    width: 90%;
+    height: 60px;
+    margin-bottom: 10px;
+}
+input{
+    border: 1px solid grey;
+}
+input[type=submit]{
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+}
+.form-infor{
+    display: flex;
+    width: 100%;
+}
+.infor{
+    margin-top: 20px;
+    width: 40%;
+}
+.infor-title{
+    font-size: 25px;
+    color: brown;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed brown;
+}
+.content{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.content p{
+    margin-bottom: 30px;
+}
+.rightside{
+    margin-top: 70px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 30%;
+}
+.readmore{
+    text-align: end;
+    font-weight: bold;
+    color: rgb(11, 11, 150);
+}
+.footer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%s;
+    color: white;
+    background-color: rgb(11, 11, 150);
+    height: 20px;
+    padding: 20px;
+}
+.footer ul{
+    display: flex;
+}
+.footer li{
+    display: list-item;
+    padding: 5px;
+    font-size: small;
+    list-style-type: circle;
+    margin-left: 20px;
+}
+.footer a{
+    text-decoration: none;
+    color: rgb(0, 136, 255);
+}
