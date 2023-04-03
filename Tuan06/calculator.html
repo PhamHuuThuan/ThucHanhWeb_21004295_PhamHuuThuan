@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+        <div class="calculator">
+            <div class="row-1">
+                <div class="col-1" id="display">0</div>
+            </div>
+            <div class="row">
+                <button class="col" id="1" onclick="getValue(1)">1</button>
+                <button class="col" id="2" onclick="getValue(2)">2</button>
+                <button class="col" id="3" onclick="getValue(3)">3</button>
+                <button class="col" id="+" onclick="mathInput('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="col" id="4" onclick="getValue(4)">4</button>
+                <button class="col" id="5" onclick="getValue(5)">5</button>
+                <button class="col" id="6" onclick="getValue(6)">6</button>
+                <button class="col" id="-" onclick="mathInput('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="col" id="7" onclick="getValue(7)">7</button>
+                <button class="col" id="8" onclick="getValue(8)">8</button>
+                <button class="col" id="9" onclick="getValue(9)">9</button>
+                <button class="col" id="/" onclick="mathInput('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="col" id="0" onclick="getValue(0)">0</button>
+                <button class="col" onclick="clearText()">AC</button>
+                <button class="col" onclick="sloveMath()">=</button>
+                <button class="col" id="*" onclick="mathInput('*')">*</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var $ = document;
+        var numdisplay ='';
+        var num = '';
+        var kq;
+        function getValue(id){
+            num += $.getElementById(id).innerHTML;
+            numdisplay+=$.getElementById(id).innerHTML;
+            $.getElementById('display').innerHTML = numdisplay;
+        }
+        function clearText(){
+            num = '';
+            numdisplay = '';
+            $.getElementById('display').innerHTML = 0;
+        }
+        function mathInput(id){
+            num = '';
+            numdisplay+=' ';
+            numdisplay+= $.getElementById(id).innerHTML;
+            numdisplay+=' ';
+            $.getElementById('display').innerHTML = numdisplay;
+        }
+        function sloveMath(){
+            kq = evaluate(numdisplay);
+            $.getElementById('display').innerHTML = kq;
+            numdisplay = kq;
+        }
+        function evaluate(expression) {
+            let tokens = expression.split(' ');
+            let values = [];
+            let operators = [];
+
+            for (let i = 0; i < tokens.length; i++) {
+                if (tokens[i] === ' ') {
+                    continue;
+                }else if (tokens[i] < ':' && tokens[i] >= '0') {
+                    let buffer = '';
+                    while (i < tokens.length && tokens[i] < ':' && tokens[i] >= '0') {
+                        buffer += tokens[i++];
+                    }
+                    values.push(parseInt(buffer));
+                    i--;
+                } else if (tokens[i] === '+' || tokens[i] === '-' || tokens[i] === '*' || tokens[i] === '/') {
+                    while (operators.length !== 0 && hasPrecedence(tokens[i], operators[operators.length - 1])) {
+                        let value2 = values.pop();
+                        let value1 = values.pop();
+                        let op = operators.pop();
+                        values.push(applyOperator(value1, value2, op));
+                    }
+                    operators.push(tokens[i]);
+                }
+            }
+            while (operators.length !== 0) {
+                let value2 = values.pop();
+                let value1 = values.pop();
+                let op = operators.pop();
+                values.push(applyOperator(value1, value2, op));
+            }
+
+            return values[values.length - 1];
+        }
+        function hasPrecedence(op1, op2) {
+            if ((op1 === '*' || op1 === '/') && (op2 === '+' || op2 === '-')) {
+                return false;
+            }
+            return true;
+        }
+
+        function applyOperator(value1, value2, op) {
+            switch (op) {
+                case '+':
+                    return value1 + value2;
+                case '-':
+                    return value1 - value2;
+                case '*':
+                    return value1 * value2;
+                case '/':
+                    if (value2 === 0) {
+                        return 'ERROR';
+                    }
+                    return value1 / value2;
+            }
+        }
+    </script>
+</body>
+</html>
