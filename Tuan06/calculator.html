@@ -63,7 +63,7 @@
         }
         function sloveMath(){
             kq = evaluate(numdisplay);
-            $.getElementById('display').innerHTML = kq;
+            $.getElementById('display').innerHTML = kq.toFixed(2);
             numdisplay = kq;
         }
         function evaluate(expression) {
