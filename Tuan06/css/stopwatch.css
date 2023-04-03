@@ -1,11 +1,13 @@
 .container{
     width: 500px;
+    padding: 15px 30px;
     display: flex;
     font-size: 100px;
     font-weight: bold;
 }
 .button{
     width: 350px;
+    padding: 0 30px;
     display: flex;
     justify-content: space-around;
 }
@@ -21,4 +23,22 @@
 }
 .button button:hover{
     background-color: blueviolet;
+}
+.animate{
+    transform: rotateX(-360deg);
+    transition: 0.9s;
+}
+.point{
+    margin: 20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    background-color: red;
+}
+.checkanimation{
+    font-size: 22px;
+    font-style: italic;
+    width: 30%;
+    text-align: end;
+    margin-bottom: 20px;
 }

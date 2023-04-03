@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Tuan06/css/stopwatch.css">
+    <link rel="stylesheet" type="text/css" href="css/stopwatch.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,6 +20,12 @@
         <div id="seconds">
             00
         </div>
+        <div id="point">
+        </div>
+    </div>
+    <div class="checkanimation">
+        <input type="checkbox" id="check" onclick="checkanimation()">
+        <span>Animation</span>
     </div>
     <div class="button">
         <button id="btnstart" value="start" onclick="start()">Start</button>
@@ -31,34 +37,46 @@
         var min = 0;
         var second = 0;
         var count = 0;
+        var hieuung = false;
         var $ = document;
         function check(x){
             if(x<10)
                 return '0' + x;
             return x;
         }
-        function startTime(){
-            second++;
-            if(second==60){
-                second = 0;
-                min++;
+        function animation(id, num){
+            if(hieuung==true){
+                $.getElementById(id).classList.add("animate");
+                setTimeout(() => {
+                    $.getElementById(id).classList.remove("animate");
+                }, 900);
             }
-            if(min==60){
-                min = 0;
-                hour++;
-            }
-            $.getElementById('hours').innerHTML = check(hour);
-            $.getElementById('minutes').innerHTML = check(min);
-            $.getElementById('seconds').innerHTML = check(second);
+            $.getElementById('point').classList.add("point");
+            setTimeout(() => {
+                    $.getElementById('point').classList.remove("point");
+                }, 900);
+            $.getElementById(id).innerHTML = check(num);
         }
-        const interval = setInterval(startTime, 1000);
-        stop();
-        refresh();
+        function startTime(){
+                second++;
+                if(second==60){
+                    second = 0;
+                    min++;
+                    animation('minutes', min);
+                }
+                if(min==60){
+                    min = 0;
+                    hour++;
+                    animation('hours', hour);
+                }
+                animation('seconds', second); 
+            }
+        var interval = setInterval(startTime, none);
         function start(){
             if(count==0){
-                count++;
+                count++; 
                 interval = setInterval(startTime, 1000);
-            }      
+            }  
         }
         function stop(){
             clearInterval(interval);
@@ -71,6 +89,12 @@
             $.getElementById('hours').innerHTML = check(hour);
             $.getElementById('minutes').innerHTML = check(min);
             $.getElementById('seconds').innerHTML = check(second);
+        }
+        function checkanimation(){
+            if($.getElementById('check').checked)
+                hieuung=true;
+            else
+                hieuung=false;
         }
     </script>
 </body>
