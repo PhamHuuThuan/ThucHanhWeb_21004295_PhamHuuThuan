@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Tuan06/css/stopwatch.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="hours">
+            00
+        </div>
+        :
+        <div id="minutes">
+            00
+        </div>
+        :
+        <div id="seconds">
+            00
+        </div>
+    </div>
+    <div class="button">
+        <button id="btnstart" value="start" onclick="start()">Start</button>
+        <button id="btnstop" value="stop" onclick="stop()">Stop</button>
+        <button id="btnrefesh" value="refresh" onclick="refresh()">Refresh</button>
+    </div>
+    <script>
+        var hour =0;
+        var min = 0;
+        var second = 0;
+        var count = 0;
+        var $ = document;
+        function check(x){
+            if(x<10)
+                return '0' + x;
+            return x;
+        }
+        function startTime(){
+            second++;
+            if(second==60){
+                second = 0;
+                min++;
+            }
+            if(min==60){
+                min = 0;
+                hour++;
+            }
+            $.getElementById('hours').innerHTML = check(hour);
+            $.getElementById('minutes').innerHTML = check(min);
+            $.getElementById('seconds').innerHTML = check(second);
+        }
+        const interval = setInterval(startTime, 1000);
+        stop();
+        refresh();
+        function start(){
+            if(count==0){
+                count++;
+                interval = setInterval(startTime, 1000);
+            }      
+        }
+        function stop(){
+            clearInterval(interval);
+            count = 0;
+        }
+        function refresh(){
+            hour = 0;
+            min = 0;
+            second = 0;
+            $.getElementById('hours').innerHTML = check(hour);
+            $.getElementById('minutes').innerHTML = check(min);
+            $.getElementById('seconds').innerHTML = check(second);
+        }
+    </script>
+</body>
+</html>
