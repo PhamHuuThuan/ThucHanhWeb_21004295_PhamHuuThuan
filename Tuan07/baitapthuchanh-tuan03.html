@@ -280,20 +280,20 @@
         #inputmail{
             width: 300px;
             height: 50px;
-            margin: 0%;
-            padding: 0%;
             font-family: Arial;
-            font-size: large;
+            display: inline;
+            border: none;
+            border-radius: 10px 0 0 10px;
+        }
+        #inputmail input[type=text]:focus{
+            border: none;
+            outline: none;
         }
         #subscribe{
+            display: inline;
             height: 55px;
             width: 125px;
-            font-family: Arial;
-            font-size: large;
-            color: white;
-            margin: 0%;
-            padding: 0%;
-            background-color: rgb(14, 206, 0);
+            border-radius: 0 10px 10px 0;
         }
         .nav a{
             color: gray;
@@ -318,8 +318,12 @@
             color: rgb(54, 54, 54);
             font-size: medium;
         }
-        .dropdown:focus{
+        .dropdown-toggle:hover{
             background-color: rgba(128, 128, 128, 0.75);
+        }
+        .submail{
+            background-color: white;
+            border-radius: 10px;
         }
     </Style>
 </head>
@@ -562,14 +566,24 @@
                     </div>
                 </div>
             </div>
-            <div class="chapter">
-                <a href="" class="menuitem"><img src="ProductListing/prev.png"></a>
-                <a href="" class="menuitem">1</a>
-                <a href="" class="menuitem">2</a>
-                <a href="" class="menuitem">3</a>
-                <a href="" class="menuitem">4</a>
-                <a href="" class="menuitem"><img src="ProductListing/next.png"></a>
-            </div>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="" aria-label="Previous">
+                        <span aria-hidden="true">&laquo</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="">1</a></li>
+                <li class="page-item"><a class="page-link" href="">2</a></li>
+                <li class="page-item"><a class="page-link" href="">3</a></li>
+                <li class="page-item"><a class="page-link" href="">4</a></li>
+                <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>            
+            </ul>
         </div>
         <div class="footer">
             <div class="detail">
@@ -602,9 +616,9 @@
                 <div>
                     <h2>Receive new promitons</h2>
                     <p>Duis ea tempor commodo amet reprehende</p>
-                    <div>
-                        <input type="text" placeholder="Input your email" id="inputmail">
-                        <input type="submit" value="Subscribe" id="subscribe">
+                    <div class="submail">
+                        <input type="text" placeholder="Input your email" class="form-control" id="inputmail">
+                        <input type="submit" value="Subscribe" class="btn-success" id="subscribe">
                     </div>
                 </div>
                 <div>
