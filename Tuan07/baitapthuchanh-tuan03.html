@@ -303,8 +303,13 @@
             height: 50px;
             border: none;
         }
-        .btn-group{
-            
+        .btn-group button:focus{
+            color: white;
+            background-color: green;
+            outline: none;
+        }
+        .btn-default{
+            color: green;
         }
     </Style>
 </head>
@@ -338,7 +343,7 @@
         <div class="productlist">
             <div class="tools">
                 <div class="btn-group btn-group-lg">
-                    <button class="btn btn-success">All Products</button>
+                    <button class="btn btn-default">All Products</button>
                     <button class="btn btn-default">Face</button>
                     <button class="btn btn-default">Body</button>
                 </div>
