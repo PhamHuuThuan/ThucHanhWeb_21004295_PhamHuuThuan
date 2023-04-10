@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Tuan03 apply Bootstrap</title>
+    <Style>
+        body{
+            width: 100%;
+            background-color: bisque;
+            margin: 0%;
+            padding: 0%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+        }
+        .head{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            width: 100%;
+            height: 60px;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-around;
+            width: 280px;
+        }
+        .menuitem{
+            font-size: medium;
+            font-family: Arial;
+            color: rgb(190, 190, 190);
+        }
+        .account{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 370px;
+        }
+        #search{
+            width: 200px;
+            height: 35px;
+            border-radius: 5px;
+            border-color: rgb(203, 203, 203);
+            border-style: solid;
+        }
+        .usercart{
+            display: flex;
+            align-items: center;
+            height: 20px;
+            width: auto;
+        }
+        .banner{
+            width: 100%;
+            height: 390px;
+        }
+        .intro{
+            position: absolute;
+            left: 120px;
+            top: 140px;
+            width: 450px;
+            height: 120px;
+            font-size: larger;
+            font-family: Arial;
+        }
+        .productlist{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 1940px;
+            background-color: white;
+        }
+        .footer{
+            width: 100%;
+            height: 430px;
+            background-color: black;
+        }
+        .tools{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            height: 55px;
+            font-size: larger;
+        }
+        .productmenu{
+            display: flex;
+            flex-direction: row;
+            width: 540px;
+            height: 55px;
+            color: rgb(65, 184, 124);
+            font-family: Arial;
+        }
+        .prdmnitem{
+            width: 180px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+        }
+        #allproduct{
+            background-color: rgb(44, 185, 100);
+            color: white;
+            width: 180px;
+            height: 55px;
+        }
+        .toolright{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 400px;
+            height: 60px;
+        }
+        #searchproduct{
+            width: 240px;
+            height: 50px;
+            border-radius: 5px;
+            border-color: rgb(203, 203, 203);
+            border-style: solid;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        #sort{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 135px;
+            background-color: rgba(227, 227, 227, 0.59);
+            font-family: Arial;
+            color: gray;
+            border-radius: 5px;
+        }
+        .container1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 4%;
+            width: 80%;
+            height: 1500px;
+            margin-top: 0%;
+        }
+        #product{
+            font-size: large;
+            font-family: Arial;
+        }
+        .introimg{
+            position: relative;
+        }
+        #bestseller{
+            position: absolute;
+            top: 5%;
+            left: 70%;
+            background-color: rgb(255, 174, 0);
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            font-size: smaller;
+            font-family: Arial;
+            color: rgba(58, 58, 58, 0.833);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #producttitle{
+            margin-bottom: 1%;
+        }
+        #productdetail{
+            margin-top: 0%;
+            font-size: small;
+        }
+        .cart{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #price{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #price1{
+            font-size: xx-large;
+            font-family: Arial;
+            margin-right: 10px;
+        }
+        #price2{
+            font-size: medium;
+            font-family: Arial;
+            color: rgba(184, 184, 184, 0.823);
+        }
+        .chapter{
+            font-size: large;
+            font-family: Arial;
+            color: rgb(175, 165, 165);
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            color: rgb(190, 190, 190);
+        }
+        .detail{
+            display: flex;
+            justify-content: space-around;
+            height: 250px;
+            width: 700px;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 240px;
+        }
+        .language{
+            width: 130px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: medium;
+            font-family: Arial;
+            background-color: black;
+            color: rgb(190, 190, 190);
+        }
+        .help{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 170px;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 200px;
+        }
+        .social{
+            display: flex;
+            flex-direction:column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 450px;
+            height: 230px;
+        }
+        .copyright{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 380px;
+        }
+        #inputmail{
+            width: 300px;
+            height: 50px;
+            margin: 0%;
+            padding: 0%;
+            font-family: Arial;
+            font-size: large;
+        }
+        #subscribe{
+            height: 55px;
+            width: 125px;
+            font-family: Arial;
+            font-size: large;
+            color: white;
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(14, 206, 0);
+        }
+        .nav a{
+            color: gray;
+        }
+        .btn{
+            width: 200px;
+            height: 50px;
+            border: none;
+        }
+        .btn-group{
+            
+        }
+    </Style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="nav navbar-nav">
+                <li><a href="">Shop</a></li>
+                <li><a href="">Offers</a></li>
+                <li><a href="">Our story</a></li>
+                <li><a href="">Blog</a></li>
+            </div>
+            <div class="logo">
+                <img src="ProductListing/logo.png">
+            </div>
+            <div class="account">
+                <input type="text" placeholder="Search product" class="form-control">
+                <div class="usercart">
+                    <a href=""><img src="ProductListing/cart.png" id="cart"></a>
+                    <a href=""><img src="ProductListing/account.png" id="user"></a>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="ProductListing/Image 1.png" style="width: 100%;">
+            <div class="intro">
+                <h1>Gift for your skin</h1>
+                <p>Aliquip fugiat ipsum nostrud ex et eu incidiunt quis minim dolore excepteur voluptate</p>
+            </div>
+        </div>
+        <div class="productlist">
+            <div class="tools">
+                <div class="btn-group btn-group-lg">
+                    <button class="btn btn-success">All Products</button>
+                    <button class="btn btn-default">Face</button>
+                    <button class="btn btn-default">Body</button>
+                </div>
+                <div class="toolright">
+                    <input type="text" placeholder="Search product" id="searchproduct">
+                    <span id="sort">Sort by =</span>
+                </div>
+            </div>
+            <div class="container1">
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (1).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$32</b>
+                            <span id="price2">$42</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (2).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$22</b>
+                            <span id="price2">$28</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (3).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$18</b>
+                            <span id="price2">$26</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (4).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$48</b>
+                            <span id="price2">$56</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (5).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$31</b>
+                            <span id="price2"></span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (6).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$40</b>
+                            <span id="price2">$48</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (7).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$26</b>
+                            <span id="price2"></span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (8).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$18</b>
+                            <span id="price2"></span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (9).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$52</b>
+                            <span id="price2"></span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (10).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$47</b>
+                            <span id="price2">$42</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (11).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$44</b>
+                            <span id="price2"></span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+                <div id="product">
+                    <div class="introimg">
+                        <img src="ProductListing/Image 1 (12).png">
+                        <div id="bestseller">Best-seller</div>
+                    </div>
+                    
+                    <h4 id="producttitle">Product title</h4>
+                    <p id="productdetail">Labore sint ipsum dolore mollit</p>
+                    <div class="cart">
+                        <div id="price">
+                            <b id="price1">$32</b>
+                            <span id="price2">$42</span>
+                        </div>  
+                        <img src="ProductListing/Button 1 (2).png">
+                    </div>
+                </div>
+            </div>
+            <div class="chapter">
+                <a href="" class="menuitem"><img src="ProductListing/prev.png"></a>
+                <a href="" class="menuitem">1</a>
+                <a href="" class="menuitem">2</a>
+                <a href="" class="menuitem">3</a>
+                <a href="" class="menuitem">4</a>
+                <a href="" class="menuitem"><img src="ProductListing/next.png"></a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="detail">
+                <div class="about">
+                    <h2>About</h2>
+                    <a href="" class="menuitem">Home</a>
+                    <a href="" class="menuitem">Shop</a>
+                    <a href="" class="menuitem">Our Story</a>
+                    <a href="" class="menuitem">Blogs</a>
+                    <select class="language">
+                        <option value="en">English</option>
+                        <option value="vie">Tieng Viet</option>
+                    </select>
+                </div>
+                <div class="help">
+                    <h2>Help</h2>
+                    <a href="" class="menuitem">Shipping and returns</a>
+                    <a href="" class="menuitem">Track Order</a>
+                    <a href="" class="menuitem">FAQs</a>
+                </div>
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <span>Phone:</span>
+                    <span>(+1) 123 456 7893</span>
+                    <span>Email: </span>
+                    <span>huuthuan1405@email.com</span>
+                </div>
+            </div>
+            <div class="social">
+                <div>
+                    <h2>Receive new promitons</h2>
+                    <p>Duis ea tempor commodo amet reprehende</p>
+                    <div>
+                        <input type="text" placeholder="Input your email" id="inputmail">
+                        <input type="submit" value="Subscribe" id="subscribe">
+                    </div>
+                </div>
+                <div>
+                    <img src="ProductListing/Twitter.png">
+                    <img src="ProductListing/Facebook 1.png">
+                    <img src="ProductListing/LinkedIn.png">
+                    <img src="ProductListing/YouTube.png">
+                </div>
+                <div class="copyright">
+                    <span>© 2022 Brand, Inc.</span>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Sitemap</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
