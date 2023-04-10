@@ -311,6 +311,16 @@
         .btn-default{
             color: green;
         }
+        .btn-primary{
+            width: 125px;
+            height: 50px;
+            background-color: rgba(128, 128, 128, 0.25);
+            color: rgb(54, 54, 54);
+            font-size: medium;
+        }
+        .dropdown:focus{
+            background-color: rgba(128, 128, 128, 0.75);
+        }
     </Style>
 </head>
 <body>
@@ -348,8 +358,14 @@
                     <button class="btn btn-default">Body</button>
                 </div>
                 <div class="toolright">
-                    <input type="text" placeholder="Search product" id="searchproduct">
-                    <span id="sort">Sort by =</span>
+                    <input type="text" placeholder="Search product" class="form-control" id="searchproduct">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Name</a></li>
+                            <li><a href="">Price</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="container1">
