@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h2>Kiem tra Input</h2>
+    <input type="text" id="valueInput" class="form-control" style="width: 300px; display: inline;">
+    <p id="mess_output"></p>
+    <button class="btn btn-success" onclick="checkInput()">Submit</button>
+    <script>
+        var $ = document;
+        function checkInput(){
+            let input = $.getElementById('valueInput').value;
+            if(checkNum(input)){
+                $.getElementById('mess_output').classList.add("text-success");
+                $.getElementById('mess_output').innerHTML = "This is number.";
+            }else if(checkChar(input)){
+                $.getElementById('mess_output').classList.add("text-warning");
+                $.getElementById('mess_output').innerText = "This is character.";
+            }else if(checkCharAndNum(input)){
+                $.getElementById('mess_output').classList.add("text-private");
+                $.getElementById('mess_output').innerText = "This is character and number. Number: " + replaceTool(input, /[a-zA-Z ]/g) + " and Character: " + replaceTool(input, /[0-9]/g);
+            }else{
+                $.getElementById('mess_output').classList.add("text-danger");
+                $.getElementById('mess_output').innerText = "This is not number or character.";
+            }
+        }
+        // 1. check number input
+        let number = ['123', 'a12', '321', '1-2-3'];
+        let checkNumArr = number.map(checkNum);
+        console.log(number);
+        console.log(checkNumArr);
+        function checkNum(number){
+            const numRegex = /^\d+$/;
+            return numRegex.test(number);
+        }
+        // 2. check character input
+        let wordArr = ['Pham', 'Huu', 'z123', '1 2-3', 'Thuan'];
+        let checkCharArr = wordArr.map(checkChar);
+        console.log(wordArr);
+        console.log(checkCharArr);
+        function checkChar(word){
+            const charRegex = /^[a-zA-Z ]+$/;
+            return charRegex.test(word);
+        }
+        function checkCharAndNum(str){
+            const regex = /^[a-zA-Z0-9 ]+$/;
+            return regex.test(str);
+        }
+        function replaceTool(str, regex){
+            return str.replace(regex, "");
+        }
+        // 3. tao array 091-090-123 090.123.456 090 090 091 
+        // 4.replace: 091090123 090123456 090090091
+        let num = ['091-090-123', '090.123.456', '090 090 091'];
+        console.log(num);
+        let num1 = num.map(replaceNum);
+        console.log(num1);
+        function replaceNum(number){
+            return number.replace(/[- .]/g, "");
+        }
+    </script>
+</body>
+</html>
