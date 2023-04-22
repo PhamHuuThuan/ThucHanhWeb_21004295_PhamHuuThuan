@@ -29,30 +29,30 @@
                     </div>
                     <div class="modal-body">
                         <p><b>Mã bệnh nhân</b></p>
-                        <input id="mabn" class="form-control" type="text" placeholder="Ma benh nhan">
-                        <p class="text-danger"><i>(*) BN-YYYYYY</i></p>
+                        <input id="mabn" class="form-control" type="text" placeholder="Ma benh nhan" onblur="checkMaBN()">
+                        <p class="text-danger"><i id="mess-mabn"></i></p>
                         <p><b>Mật khẩu</b></p>
-                        <input id="pass" class="form-control" type="password" placeholder="Mat khau">
-                        <p class="text-danger"><i>(*)</i></p>
+                        <input id="pass" class="form-control" type="password" placeholder="Mat khau" onblur="checkPass()">
+                        <p class="text-danger"><i id="mess-pwd"></i></p>
                         <p><b>Ngày khám</b></p>
-                        <input type="date" class="form-control" id="ngaykham">
-                        <p class="text-danger"><i>(*)</i></p>
+                        <input type="date" class="form-control" id="ngaykham" onblur="checkDate()">
+                        <p class="text-danger"><i id="mess-ngaykham"></i></p>
                         <p><b>Loại dịch vụ</b></p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1">
+                            <input class="form-check-input" type="checkbox" value="1" id="chk1">
                             <label class="form-check-label">Khám bệnh theo yêu cầu</label>
-                            <input class="form-check-input" type="checkbox" value="1">
+                            <input class="form-check-input" type="checkbox" value="1" id="chk2">
                             <label class="form-check-label">Điều trị ngoại trú</label>
-                            <input class="form-check-input" type="checkbox" value="1">
+                            <input class="form-check-input" type="checkbox" value="1" id="chk3">
                             <label class="form-check-label">Bác sĩ theo yêu cầu</label>
                         </div>
                         <p><b>Chuyên khoa</b></p>
-                        <select class="form-control">
-                            <option value="1">Ngoại tổng quát</option>
-                            <option value="2">Nhi</option>
-                            <option value="3">Nội tổng quát</option>
+                        <select class="form-control" id="chuyenkhoa">
+                            <option value="Ngoại tổng quát">Ngoại tổng quát</option>
+                            <option value="Nhi">Nhi</option>
+                            <option value="Nội tổng quát">Nội tổng quát</option>
                         </select>
-                        <button type="button" class="btn btn-primary">Đặt lịch</button>
+                        <button type="button" class="btn btn-primary" onclick="datLich()" id="btndat">Đặt lịch</button>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -76,5 +76,6 @@
             </tbody>
         </table>
     </div>
+    <script src="../Js/javascript.js"></script>
 </body>
 </html>
